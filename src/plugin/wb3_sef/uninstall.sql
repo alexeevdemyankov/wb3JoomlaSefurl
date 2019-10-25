@@ -1,0 +1,1 @@
+DROP TABLE `wb3_sefurl`;

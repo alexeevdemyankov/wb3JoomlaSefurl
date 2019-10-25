@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>plg_system_wb3_sef</name>
+    <author>Alexeev_ilya</author>
+    <creationDate>June 2019</creationDate>
+    <copyright>Bookclub. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>alexeevdemyankov@gmail.com</authorEmail>
+    <authorUrl>www.ialexeev.cloud</authorUrl>
+    <version>3.0.0</version>
+    <description>PLG_WB3SEF_JOOMLA_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="wb3_sef">wb3_sef.php</filename>
+        <filename>install.sql</filename>
+        <filename>uninstall.sql</filename>
+    </files>
+    <install>
+        <sql>
+            <file charset="utf8" driver="mysql">install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="skipKeys"
+                        type="text"
+                        label="PLG_WB3SEF_PARAMS_SKIP"
+                        description="PLG_WB3SEF_PARAMS_SKIP_DESC"
+                        hint=""
+                />
+            </fieldset>
+        </fields>
+    </config>
+
+
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_wb3_sef.ini</language>
+        <language tag="en-GB">en-GB.plg_system_wb3_sef.sys.ini</language>
+    </languages>
+
+
+</extension>
